@@ -12,8 +12,8 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="CaptainSkuEngine.csproj" t="IncludeRecursive" />
         <e p="Engines" t="Include">
+          <e p="CombinationEngine.cs" t="Include" />
           <e p="IPromotionEngine.cs" t="Include" />
-          <e p="PromotionEngine.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="PricedGroup.cs" t="Include" />
@@ -28,12 +28,16 @@
             </e>
           </e>
         </e>
+        <e p="Services" t="Include">
+          <e p="IPromotionService.cs" t="Include" />
+          <e p="PromotionService.cs" t="Include" />
+        </e>
       </e>
       <e p="CaptainSkuEngine.sln" t="IncludeFlat" />
       <e p="CaptainSkuEngineUnitTests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="CaptainSkuEngineUnitTests.csproj" t="IncludeRecursive" />
-        <e p="CombinationPromotionEngineTests.cs" t="Include" />
+        <e p="CombinationEngineTests.cs" t="Include" />
         <e p="Helpers.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

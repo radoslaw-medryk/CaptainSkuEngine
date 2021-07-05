@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using CaptainSkuEngine.Engines.Combination;
+using CaptainSkuEngine.Engines;
 using CaptainSkuEngine.Models;
 using NUnit.Framework;
 
 namespace CaptainSkuEngineUnitTests
 {
-    public class CombinationPromotionEngineTests
+    public class CombinationEngineTests
     {
         private static readonly Sku TestSkuA = new Sku
         {
@@ -272,7 +272,7 @@ namespace CaptainSkuEngineUnitTests
         [Test]
         public void SkipsEmptyRules()
         {
-            var engine = new PromotionEngine(new List<PricedGroup>
+            var engine = new CombinationEngine(new List<PricedGroup>
             {
                 new PricedGroup
                 {
@@ -329,7 +329,7 @@ namespace CaptainSkuEngineUnitTests
         [Test]
         public void AppliesRulesInDefinedOrder()
         {
-            var engine = new PromotionEngine(new List<PricedGroup>
+            var engine = new CombinationEngine(new List<PricedGroup>
             {
                 new PricedGroup
                 {
@@ -371,7 +371,7 @@ namespace CaptainSkuEngineUnitTests
         [Test]
         public void RulesDontOverlapTheSameSku()
         {
-            var engine = new PromotionEngine(new List<PricedGroup>
+            var engine = new CombinationEngine(new List<PricedGroup>
             {
                 new PricedGroup
                 {
@@ -427,9 +427,9 @@ namespace CaptainSkuEngineUnitTests
                 }, result);
         }
 
-        private PromotionEngine CreateTestEngine()
+        private CombinationEngine CreateTestEngine()
         {
-            return new PromotionEngine(new List<PricedGroup>
+            return new CombinationEngine(new List<PricedGroup>
             {
                 new PricedGroup
                 {

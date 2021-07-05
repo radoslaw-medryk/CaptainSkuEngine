@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using CaptainSkuEngine.Models;
 
-namespace CaptainSkuEngine.Engines.Combination
+namespace CaptainSkuEngine.Engines
 {
-    public class PromotionEngine : IPromotionEngine
+    public class CombinationEngine : IPromotionEngine
     {
         private readonly ICollection<PricedGroup> _rules;
         
-        public PromotionEngine(ICollection<PricedGroup> rules)
+        public CombinationEngine(ICollection<PricedGroup> rules)
         {
             _rules = rules;
         }
