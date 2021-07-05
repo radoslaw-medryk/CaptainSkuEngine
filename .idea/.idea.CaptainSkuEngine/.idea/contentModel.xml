@@ -12,10 +12,8 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="CaptainSkuEngine.csproj" t="IncludeRecursive" />
         <e p="Engines" t="Include">
-          <e p="Combination" t="Include">
-            <e p="PromotionEngine.cs" t="Include" />
-          </e>
           <e p="IPromotionEngine.cs" t="Include" />
+          <e p="PromotionEngine.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="PricedGroup.cs" t="Include" />

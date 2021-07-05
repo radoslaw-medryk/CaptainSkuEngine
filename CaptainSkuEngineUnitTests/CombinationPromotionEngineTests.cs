@@ -268,6 +268,164 @@ namespace CaptainSkuEngineUnitTests
                     }
                 }, result);
         }
+        
+        [Test]
+        public void SkipsEmptyRules()
+        {
+            var engine = new PromotionEngine(new List<PricedGroup>
+            {
+                new PricedGroup
+                {
+                    Entries = new SkuWithCount[]{ },
+                    TotalPrice = 45
+                },
+            });
+
+            var result = engine.ApplyPromotion(new List<SkuWithCount>
+            {
+                new SkuWithCount
+                {
+                    Sku = TestSkuA,
+                    Count = 5
+                },
+                new SkuWithCount
+                {
+                    Sku = TestSkuB,
+                    Count = 3
+                },
+                new SkuWithCount
+                {
+                    Sku = TestSkuC,
+                    Count = 1
+                },
+            });
+            
+            Helpers.AssertJsonEqual( 
+                new PromotionResult
+                {
+                    TotalPrice = 360,
+                    PromotionalGroups = new List<PricedGroup>(),
+                    OmittedEntries = new []
+                    {
+                        new SkuWithCount
+                        {
+                            Sku = TestSkuA,
+                            Count = 5
+                        },
+                        new SkuWithCount
+                        {
+                            Sku = TestSkuB,
+                            Count = 3
+                        },
+                        new SkuWithCount
+                        {
+                            Sku = TestSkuC,
+                            Count = 1
+                        },
+                    }
+                }, result);
+        }
+        
+        [Test]
+        public void AppliesRulesInDefinedOrder()
+        {
+            var engine = new PromotionEngine(new List<PricedGroup>
+            {
+                new PricedGroup
+                {
+                    Entries = new []{ new SkuWithCount { Sku = TestSkuA, Count = 3} },
+                    TotalPrice = 130
+                },
+                new PricedGroup
+                {
+                    Entries = new []{ new SkuWithCount { Sku = TestSkuA, Count = 3} },
+                    TotalPrice = 9999
+                },
+            });
+
+            var result = engine.ApplyPromotion(new List<SkuWithCount>
+            {
+                new SkuWithCount
+                {
+                    Sku = TestSkuA,
+                    Count = 3
+                },
+            });
+            
+            Helpers.AssertJsonEqual( 
+                new PromotionResult
+                {
+                    TotalPrice = 130,
+                    PromotionalGroups = new List<PricedGroup>
+                    {
+                        new PricedGroup
+                        {
+                            Entries = new [] { new SkuWithCount {Sku = TestSkuA, Count = 3} },
+                            TotalPrice = 130
+                        }
+                    },
+                    OmittedEntries = new SkuWithCount[]{ }
+                }, result);
+        }
+        
+        [Test]
+        public void RulesDontOverlapTheSameSku()
+        {
+            var engine = new PromotionEngine(new List<PricedGroup>
+            {
+                new PricedGroup
+                {
+                    Entries = new []{ new SkuWithCount { Sku = TestSkuC, Count = 1}, new SkuWithCount { Sku = TestSkuD, Count = 1} },
+                    TotalPrice = 100
+                },
+                new PricedGroup
+                {
+                    Entries = new []{ new SkuWithCount { Sku = TestSkuB, Count = 1}, new SkuWithCount { Sku = TestSkuC, Count = 1} },
+                    TotalPrice = 9999
+                },
+            });
+
+            var result = engine.ApplyPromotion(new List<SkuWithCount>
+            {
+                new SkuWithCount
+                {
+                    Sku = TestSkuB,
+                    Count = 1
+                },
+                new SkuWithCount
+                {
+                    Sku = TestSkuC,
+                    Count = 1
+                },
+                new SkuWithCount
+                {
+                    Sku = TestSkuD,
+                    Count = 1
+                },
+            });
+            
+            Helpers.AssertJsonEqual( 
+                new PromotionResult
+                {
+                    TotalPrice = 130,
+                    PromotionalGroups = new List<PricedGroup>
+                    {
+                        new PricedGroup
+                        {
+                            Entries = new []{ new SkuWithCount { Sku = TestSkuC, Count = 1}, new SkuWithCount { Sku = TestSkuD, Count = 1} },
+                            TotalPrice = 100
+                        },
+                    },
+                    OmittedEntries = new []
+                    {
+                        new SkuWithCount
+                        {
+                            Sku = TestSkuB,
+                            Count = 1
+                        }
+                    }
+                }, result);
+        }
 
         private PromotionEngine CreateTestEngine()
         {
