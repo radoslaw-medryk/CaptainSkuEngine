@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5aa81bd-7d7e-47d5-bcd6-de28d801331c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CaptainSkuEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaptainSkuEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/PromotionEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/PromotionEngine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +42,8 @@
         <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/Helpers.cs" />
         <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/IPromotionEngine.cs" />
         <option value="$PROJECT_DIR$/CaptainSkuEngineUnitTests/Helpers.cs" />
-        <option value="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" />
         <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/PromotionEngine.cs" />
+        <option value="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" />
       </list>
     </option>
   </component>
@@ -80,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625510282104</updated>
-      <workItem from="1625510283434" duration="8136000" />
+      <workItem from="1625510283434" duration="8459000" />
     </task>
     <servers />
   </component>
@@ -122,19 +120,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs</url>
-          <line>36</line>
-          <properties documentPath="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" initialLine="36">
-            <startOffsets>
-              <option value="824" />
-            </startOffsets>
-            <endOffsets>
-              <option value="856" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/PromotionEngine.cs</url>
