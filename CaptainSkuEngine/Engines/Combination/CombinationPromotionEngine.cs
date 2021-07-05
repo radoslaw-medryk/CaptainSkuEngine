@@ -6,14 +6,14 @@ namespace CaptainSkuEngine.Engines.Combination
 {
     public class CombinationPromotionEngine : IPromotionEngine
     {
-        private readonly ICollection<PromotionalCombination> _combinations;
+        private readonly ICollection<PricedGroup> _combinations;
         
-        public CombinationPromotionEngine(ICollection<PromotionalCombination> combinations)
+        public CombinationPromotionEngine(ICollection<PricedGroup> combinations)
         {
             _combinations = combinations;
         }
         
-        public PromotionResult ApplyPromotion(ICollection<BasketEntry> entries)
+        public ICollection<PromotionResult> ApplyPromotion(ICollection<SkuWithCount> entries)
         {
             throw new NotImplementedException();
         }

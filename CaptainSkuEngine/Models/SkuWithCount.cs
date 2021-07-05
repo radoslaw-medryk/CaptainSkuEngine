@@ -1,6 +1,6 @@
 namespace CaptainSkuEngine.Models
 {
-    public class BasketEntry
+    public class SkuWithCount
     {
         public Sku Sku { get; set; }
         public int Count { get; set; }
