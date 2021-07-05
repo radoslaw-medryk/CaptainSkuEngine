@@ -4,14 +4,9 @@
     <list default="true" id="b5aa81bd-7d7e-47d5-bcd6-de28d801331c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaptainSkuEngine/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaptainSkuEngine/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaptainSkuEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaptainSkuEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/CombinationPromotionEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/CombinationPromotionEngine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/PromotionalCombination.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/CombinationPromotionEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/PromotionEngine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaptainSkuEngine/Engines/IPromotionEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngine/Engines/IPromotionEngine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptainSkuEngine/Models/BasketEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngine/Models/SkuWithCount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptainSkuEngine/Models/PricedGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngine/Models/PricedGroup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptainSkuEngine/Models/PromotionResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngine/Models/PromotionResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CaptainSkuEngineUnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CaptainSkuEngineUnitTests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaptainSkuEngineUnitTests/UnitTest1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,12 +18,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/CaptainSkuEngine/Models/SkuWithCount.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CaptainSkuEngine/Models/PromotionResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/CombinationPromotionEngine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/CaptainSkuEngine/Models/Sku.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CaptainSkuEngine/Models/PricedGroup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CaptainSkuEngine/Models/SkuWithCount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CaptainSkuEngineUnitTests/Helpers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/PromotionEngine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CaptainSkuEngine/Models/Sku.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CaptainSkuEngine/Engines/IPromotionEngine.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -42,11 +38,15 @@
         <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/Combination.cs" />
         <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/PromotionalCombination.cs" />
         <option value="$PROJECT_DIR$/CaptainSkuEngine/Models/SkuWithCount.cs" />
-        <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/IPromotionEngine.cs" />
-        <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/CombinationPromotionEngine.cs" />
         <option value="$PROJECT_DIR$/CaptainSkuEngine/Models/Sku.cs" />
         <option value="$PROJECT_DIR$/CaptainSkuEngine/Models/PromotionResult.cs" />
+        <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/StackEntry.cs" />
+        <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/CombinationPromotionEngine.cs" />
+        <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/Helpers.cs" />
+        <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/IPromotionEngine.cs" />
         <option value="$PROJECT_DIR$/CaptainSkuEngineUnitTests/CombinationPromotionEngineTests.cs" />
+        <option value="$PROJECT_DIR$/CaptainSkuEngine/Engines/Combination/PromotionEngine.cs" />
+        <option value="$PROJECT_DIR$/CaptainSkuEngineUnitTests/Helpers.cs" />
       </list>
     </option>
   </component>
@@ -81,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625510282104</updated>
-      <workItem from="1625510283434" duration="3405000" />
+      <workItem from="1625510283434" duration="7347000" />
     </task>
     <servers />
   </component>

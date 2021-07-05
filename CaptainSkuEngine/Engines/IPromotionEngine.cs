@@ -5,6 +5,6 @@ namespace CaptainSkuEngine.Engines
 {
     public interface IPromotionEngine
     {
-        ICollection<PromotionResult> ApplyPromotion(ICollection<SkuWithCount> entries);
+        PromotionResult ApplyPromotion(ICollection<SkuWithCount> entries);
     }
 }

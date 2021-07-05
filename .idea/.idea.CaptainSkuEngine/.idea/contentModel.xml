@@ -13,7 +13,7 @@
         <e p="CaptainSkuEngine.csproj" t="IncludeRecursive" />
         <e p="Engines" t="Include">
           <e p="Combination" t="Include">
-            <e p="CombinationPromotionEngine.cs" t="Include" />
+            <e p="PromotionEngine.cs" t="Include" />
           </e>
           <e p="IPromotionEngine.cs" t="Include" />
         </e>
@@ -36,6 +36,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="CaptainSkuEngineUnitTests.csproj" t="IncludeRecursive" />
         <e p="CombinationPromotionEngineTests.cs" t="Include" />
+        <e p="Helpers.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">

@@ -36,7 +36,7 @@ namespace CaptainSkuEngineUnitTests
         {
             var engine = CreateTestEngine();
 
-            var results = engine.ApplyPromotion(new List<SkuWithCount>
+            var result = engine.ApplyPromotion(new List<SkuWithCount>
             {
                 new SkuWithCount
                 {
@@ -55,7 +55,7 @@ namespace CaptainSkuEngineUnitTests
                 },
             });
             
-            Assert.AreEqual(results, new []{
+            Helpers.AssertJsonEqual(result, 
                 new PromotionResult
                 {
                     TotalPrice = 100,
@@ -78,13 +78,12 @@ namespace CaptainSkuEngineUnitTests
                             Count = 1
                         },
                     }
-                }
-            });
+                });
         }
 
-        private CombinationPromotionEngine CreateTestEngine()
+        private PromotionEngine CreateTestEngine()
         {
-            return new CombinationPromotionEngine(new List<PricedGroup>
+            return new PromotionEngine(new List<PricedGroup>
             {
                 new PricedGroup
                 {
