@@ -55,7 +55,7 @@ namespace CaptainSkuEngineUnitTests
                 },
             });
             
-            Helpers.AssertJsonEqual(result, 
+            Helpers.AssertJsonEqual( 
                 new PromotionResult
                 {
                     TotalPrice = 100,
@@ -78,7 +78,7 @@ namespace CaptainSkuEngineUnitTests
                             Count = 1
                         },
                     }
-                });
+                }, result);
         }
 
         private PromotionEngine CreateTestEngine()

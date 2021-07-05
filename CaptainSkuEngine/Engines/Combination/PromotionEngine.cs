@@ -24,7 +24,7 @@ namespace CaptainSkuEngine.Engines.Combination
                 var ruleResult = ApplyRule(entriesLeft, rule);
                 
                 promotionalGroups.AddRange(ruleResult.PromotionalGroups);
-                entriesLeft.AddRange(ruleResult.OmittedEntries);
+                entriesLeft = ruleResult.OmittedEntries.ToList();
             }
 
             var totalPrice = promotionalGroups.Sum(q => q.TotalPrice) + entriesLeft.Sum(q => q.Sku.Price * q.Count);
